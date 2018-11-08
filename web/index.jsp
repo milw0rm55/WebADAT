@@ -16,10 +16,10 @@ charset=UTF-8">
  <h1>Obtiene la pelicula y su fecha </h1>
  <form action="servelts" method="POST">Presiona el
 botón para obtener los datos.
-<br> <br> Codigo: <input type=\"text\" name=\"fname\"><br>
-    <br> Titulo: <input type=\"text\" name=\"fname\"><br>
-    <br> Fecha: <input type=\"text\" name=\"fname\"><br>
-    <br> Presupuesto: <input type=\"text\" name=\"fname\"><br><br>
+<br>
+    <br> Titulo: <input type=\"text\" name="Titulo"><br>
+    <br> Fecha: <input type=\"text\" name="Fecha"><br>
+    <br> Presupuesto: <input type=\"date\" name="Presupuesto"><br><br>
  <input type="submit" name="enviar" value="Enviar"/>
  </form>
  </body>

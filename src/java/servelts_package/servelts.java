@@ -39,6 +39,10 @@ public class servelts extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            //String coddigo = request.getParameter("Codigo");
+            String Nombre = request.getParameter("Nombre");
+            String Fecha = request.getParameter("Fecha");
+            String Presupuesto = request.getParameter("Presupuesto");
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
