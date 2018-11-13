@@ -26,7 +26,7 @@ import modelo.Peliculas;
  *
  * @author Administrador
  */
-@WebServlet(name = "servelts", urlPatterns = {"/servelts"})
+@WebServlet(name = "InsertServlet", urlPatterns = {"/InsertServlet"})
 public class InsertServlet extends HttpServlet {
 
     /**
@@ -76,7 +76,7 @@ public class InsertServlet extends HttpServlet {
             out.println("<body>");
            List<Peliculas> l = aEJB.findAll();
 /* bucle para recorrer la lista que corresponda */
- for(int i = 0; i < 10; i++ )
+ for(int i = 0; i < 100; i++ )
  out.println("<b>Titulo:</b>"+ l.get(i).getTitulo()
          +", <b>Fecha </b>"+l.get(i).getFecha()
 +"<br>" );
