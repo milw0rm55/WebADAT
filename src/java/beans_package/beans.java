@@ -28,11 +28,12 @@ public List findAll(){
  return
 emf.createEntityManager().createNamedQuery ("Peliculas.findAll").getResultList();
 }
-public void addPelicula(String Titulo, Date Fecha, Double Presupuesto){
-     Peliculas pelicula = new Peliculas();
-     pelicula.setTitulo(Titulo);
-     pelicula.setFecha(Fecha);
-     pelicula.setPresupuesto(Presupuesto);
+public void addPelicula(Peliculas pelicula){
+     
+
+     emf.createEntityManager().persist(pelicula);
+    
+    }
 }
-}
+
 

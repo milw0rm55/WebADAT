@@ -17,9 +17,9 @@ charset=UTF-8">
  <form action="servelts" method="POST">Presiona el
 botón para obtener los datos.
 <br>
-    <br> Titulo: <input type=\"text\" name="Titulo"><br>
-    <br> Fecha: <input type=\"text\" name="Fecha"><br>
-    <br> Presupuesto: <input type=\"date\" name="Presupuesto"><br><br>
+    <br> Titulo: <input type="text" name="Titulo"><br>
+    <br> Fecha: <input type="date" name="date"><br>
+    <br> Presupuesto: <input  name="Presupuesto" type="number" step="0.01"><br><br>
  <input type="submit" name="enviar" value="Enviar"/>
  </form>
  </body>
