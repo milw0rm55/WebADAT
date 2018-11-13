@@ -22,6 +22,15 @@ botón para obtener los datos.
     <br> Presupuesto: <input  name="Presupuesto" type="number" step="0.01"><br><br>
  <input type="submit" name="enviar" value="Enviar"/>
  </form>
+ 
+ <form action="servelts" method="POST">Presiona el
+botón para obtener los datos.
+<br>
+    <br> Titulo: <input type="text" name="Titulo"><br>
+    <br> Fecha: <input type="date" name="date"><br>
+    <br> Presupuesto: <input  name="Presupuesto" type="number" step="0.01"><br><br>
+ <input type="submit" name="enviar" value="Enviar"/>
+ </form>
  </body>
 </html>
 

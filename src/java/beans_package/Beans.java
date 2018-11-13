@@ -19,7 +19,7 @@ import modelo.Peliculas;
  * @author Administrador
  */
 @Stateless
-public class beans {
+public class Beans {
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
  @PersistenceUnit
