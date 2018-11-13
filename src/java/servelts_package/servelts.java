@@ -45,7 +45,7 @@ public class servelts extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
-            String nombre = request.getParameter("Nombre");
+            String nombre = request.getParameter("Titulo");
             String fecha = request.getParameter("date");
             double presupuesto = Double.valueOf(request.getParameter("Presupuesto"));
             
@@ -62,6 +62,10 @@ public class servelts extends HttpServlet {
             pelicula.setFecha(fechaDate);
             pelicula.setPresupuesto(presupuesto);
             
+           System.out.println(pelicula.getTitulo());
+            System.out.println(pelicula.getCodigo());
+            System.out.println(pelicula.getFecha());
+            System.out.println(pelicula.getPresupuesto());
             aEJB.addPelicula(pelicula);
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
