@@ -34,6 +34,9 @@ public void addPelicula(Peliculas pelicula){
      emf.createEntityManager().persist(pelicula);
     
     }
+public List SearchByTitulo(String titulo){
+    return emf.createEntityManager().createNamedQuery("Peliculas.findByTitulo").setParameter("titulo", titulo).getResultList();
+}
 }
 
 

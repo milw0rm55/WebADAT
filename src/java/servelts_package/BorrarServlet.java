@@ -5,25 +5,20 @@
  */
 package servelts_package;
 
-import beans_package.Beans;
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.nio.file.Paths.get;
-import java.util.List;
-import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Peliculas;
 
 /**
  *
  * @author Administrador
  */
-@WebServlet(name = "BuscarServlet", urlPatterns = {"/BuscarServlet"})
-public class BuscarServlet extends HttpServlet {
+@WebServlet(name = "BorrarServlet", urlPatterns = {"/BorrarServlet"})
+public class BorrarServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,8 +29,6 @@ public class BuscarServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-        @EJB
-        Beans aEJB1;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -44,18 +37,10 @@ public class BuscarServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet BuscarServlet</title>");            
+            out.println("<title>Servlet BorrarServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet BuscarServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-            String titulo = request.getParameter("titulo");
-              List <Peliculas> t = aEJB1.SearchByTitulo(titulo);
-             for(int i = 0; i < 100; i++ ){
-                 out.println("<b>Titulo:</b>"+ t.get(i).getTitulo() +", <b>Fecha </b>"+t.get(i).getFecha()+"<br>" );
-             }
-             
+            out.println("<h1>Servlet BorrarServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
