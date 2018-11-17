@@ -55,7 +55,6 @@ public class BuscarServlet extends HttpServlet {
              for(int i = 0; i < 100; i++ ){
                  out.println("<b>Titulo:</b>"+ t.get(i).getTitulo() +", <b>Fecha </b>"+t.get(i).getFecha()+"<br>" );
              }
-             
             out.println("</body>");
             out.println("</html>");
         }

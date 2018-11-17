@@ -29,6 +29,13 @@ botón para obtener los datos.
     <br> Titulo: <input type="text" name="titulo"><br>
  <input type="submit" name="enviar" value="Enviar"/>
  </form>
+ 
+ <form action="BorrarServlet" method="POST">Presiona el
+botón para borrar datos.
+<br>
+    <br> Titulo: <input type="text" name="titulo"><br>
+ <input type="submit" name="enviar" value="Enviar"/>
+ </form>
  </body>
 </html>
 

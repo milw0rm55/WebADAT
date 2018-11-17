@@ -29,13 +29,18 @@ public List findAll(){
 emf.createEntityManager().createNamedQuery ("Peliculas.findAll").getResultList();
 }
 public void addPelicula(Peliculas pelicula){
-     
-
      emf.createEntityManager().persist(pelicula);
     
     }
 public List SearchByTitulo(String titulo){
     return emf.createEntityManager().createNamedQuery("Peliculas.findByTitulo").setParameter("titulo", titulo).getResultList();
+}
+public void removePelicula(Integer id){
+        EntityManager em = emf.createEntityManager();
+
+        Peliculas pelicula = em.find(Peliculas.class, id);
+
+        em.remove(pelicula);
 }
 }
 
