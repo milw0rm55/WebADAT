@@ -13,6 +13,7 @@ import javax.persistence.PersistenceUnit;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import modelo.Peliculas;
+import static modelo.Peliculas_.titulo;
 
 /**
  *
@@ -42,6 +43,15 @@ public void removePelicula(Integer id){
 
         em.remove(pelicula);
 }
+
+public void updatePelicula(Integer id, String titulo, Date fecha, Double presupuesto ) {
+    
+       EntityManager em = emf.createEntityManager();
+       Peliculas pelicula = em.find(Peliculas.class, id);
+       em.refresh(pelicula);
+
+    }
+    
 }
 
 
